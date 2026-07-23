@@ -1,0 +1,164 @@
+@use '../styles/variables' as *;
+
+.boxKeenSliderFlip {
+    position: relative;
+    margin: .5em auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .bgBox {
+        width: 100%;
+        transition-duration: .3s;
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+    .gifguide {
+        width: 76%;
+        position: absolute;
+        top: 5.3%;
+        transition-duration: .3s;
+        z-index: 1;
+        pointer-events: none;
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            top: -1%;
+            width: 95.5%;
+        }
+    }
+
+    #keenSliderFlip {
+        position: absolute;
+        top: 35%;
+        width: 75.3%;
+
+        @media (max-width: 768px) {
+            top: 31%;
+            width: 94.3%;
+        }
+
+        .keen-slider__slide {
+            background-image: none;
+            a {
+                .textBox {
+                    display: none;
+                }
+            }
+
+            .flipcards-container {
+                gap: initial;
+
+                &:hover {
+                    .flipcard .flipcard-inner,
+                    .flipcard:focus-within .flipcard-inner {
+                        transform: rotateY(180deg);
+
+                        @media (max-width: 768px) {
+                            transform: none;
+                        }
+                    }
+                }
+
+                .flipcard {
+                    width: initial;
+                    height: initial;
+
+                    .flipcard-inner {
+                        position: relative;
+                        width: 100%;
+                        transition: transform 0.8s cubic-bezier(.4, 0, 0.2, 1);
+                        transform-style: preserve-3d;
+                        display: flex !important;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: #871522;
+                        text-decoration: none;
+                        @media (max-width: 768px) {
+                            transform-style: none;
+                            flex-direction: column;
+                        }
+
+                        .flipcard-front,
+                        .flipcard-back {
+                            width: 100%;
+                            height: 100%;
+                            backface-visibility: hidden;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
+                            padding: 0;
+
+                            @media (max-width: 768px) {
+                                backface-visibility: initial;
+                            }
+                        }
+                    
+                        .flipcard-front {
+                            z-index: 2;
+                            position: relative;
+                            border: solid 2px #871522;
+                            @media (max-width: 768px) {
+                                border: solid 2px #871522;
+                                border-bottom: 0;
+                            }
+
+                            picture {
+                                width: 100%;
+                                img {
+                                    width: 100%;
+                                    display: block;
+                                }
+                            }
+                        }
+                    
+                        .flipcard-back {
+                            transform: rotateY(180deg);
+                            background: #871522;
+                            z-index: 3;
+                            position: absolute;
+                            padding: 0;
+                            border: solid 2px #871522;
+
+                            .boxBorder {
+                                border: solid 4px #F1C3CE;
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+
+                                .textBox {
+                                    color: #F1C3CE;
+                                    position: relative;
+                                    z-index: 2;
+                                    display: block !important;
+                                    font-size: 1.5vw;
+                                    text-transform: uppercase;
+                                }
+                            }
+
+                            @media (max-width: 768px) {
+                                position: relative;
+                                transform: none;
+                                height: fit-content;
+                                .boxBorder {
+                                    border: none;
+                                    .textBox {
+                                        font-size: 13px;
+                                        margin: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

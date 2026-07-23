@@ -1,0 +1,351 @@
+@use '../styles/variables' as *;
+
+.newsletter-title {
+    color: #000;
+    font-family: $font-editorial;
+    font-size: 4em;
+    font-style: italic;
+    font-weight: 600;
+    margin: 0.4em auto 0.1em auto;
+
+    @media (max-width: $mobile-size) {
+        font-size: 2.4em;
+    }
+}
+
+.newsletter {
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 2em auto 3em;
+
+    @media (max-width: $tablet-size) {
+        width: calc(100% - 1em);
+    }
+
+    .boxNewsLetter {
+        padding: 3em 8%;
+        width: 100%;
+
+        @media (max-width: $tablet-size) {
+            padding: 3em 5%;
+        }
+
+        .newsletter-title {
+            text-align: center;
+        }
+
+        .newsletter-text {
+            font-family: $font-ui;
+            font-size: 2em;
+            font-style: italic;
+            font-weight: 500;
+            line-height: 1.6;
+            text-align: center;
+
+            @media (max-width: $mobile-size) {
+                font-size: 1.6em;
+            }
+        }
+    }
+}
+
+.template-formulario-crm {
+
+    // Reset de Autofill (Google Chrome)
+    input:-webkit-autofill,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 1000px white inset !important;
+        box-shadow: 0 0 0 1000px white inset !important;
+        -webkit-text-fill-color: #000 !important;
+        caret-color: #000 !important;
+        transition: background-color 5000s ease-in-out 0s;
+    }
+
+    form {
+        // width: 95%;
+        // max-width: 78.6em;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // margin: 5em auto;
+
+        .text {
+            margin: 1em 0;
+            text-align: center;
+            line-height: 1.2;
+
+            a {
+                color: #ccc;
+                text-decoration: underline;
+            }
+        }
+
+        .flexInputs {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 0.8em 2em;
+            justify-content: center;
+            padding: 0 .5em;
+
+            input {
+                width: calc(100% / 3);
+                border: solid #000 0.15em;
+                padding: 0.5em 1em;
+                border-radius: 5em;
+                font-family: $font-ui;
+                font-size: 1.8em;
+                font-style: italic;
+                font-weight: 300;
+                margin-top: 1.2em;
+                max-width: 30em;
+
+                &:nth-child(2) {
+                    // max-width: 25em;
+                }
+
+                &:nth-child(3) {
+                    // max-width: 15em;
+                }
+
+                @media (max-width: $mobile-size) {
+                    font-size: 1.3em;
+                    margin: 0;
+                }
+
+                &:focus {
+                    outline: none;
+                    border-color: #000;
+                }
+            }
+
+            @media (max-width: $mobile-size) {
+                flex-direction: column;
+                margin-top: 0.5em;
+
+                input {
+                    width: 100%;
+                    margin: 0;
+                }
+            }
+        }
+
+        .flexCategories,
+        .flexOptions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5em;
+            margin-bottom: 1em;
+
+            .btnCat {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+
+                input {
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    cursor: pointer;
+                    z-index: 2;
+
+                    &:checked~label,
+                    &:hover~label {
+                        background-color: black;
+                        color: white;
+                        border-color: black;
+                    }
+                }
+
+                label {
+                    background-color: white;
+                    border: solid #ccc 0.15em;
+                    padding: 0.5em 1em;
+                    border-radius: 5em;
+                    text-align: center;
+                    position: relative;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                }
+            }
+        }
+
+        #submitCrm,
+        .submit,
+        .textCategoria {
+            appearance: none;
+            -webkit-appearance: none;
+            background-color: #000;
+            cursor: pointer;
+            margin: 2.6em 0 0;
+            outline: none;
+
+            @media (max-width: $mobile-size) {
+                margin: 1em 0 0;
+            }
+
+            p {
+                color: #fff;
+            }
+
+            &:disabled {
+                background-color: #ccc;
+                border-color: #ccc;
+                cursor: not-allowed;
+            }
+
+            &:hover:not(:disabled) {
+                background-color: #fff;
+
+                p {
+                    color: #000;
+                }
+            }
+        }
+    }
+
+    // Seletores atualizados para as novas classes do componente estático
+    .loadingCrm,
+    .loading {
+        display: none; // Controlado pelo JS (flex)
+        position: fixed;
+        inset: 0; // Top, left, right, bottom: 0
+        backdrop-filter: blur(0.5em);
+        background-color: rgba(255, 255, 255, 0.5);
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+
+        .imgLoading {
+            width: 8em;
+        }
+    }
+
+    .modal-dados-crm,
+    .modal-dados {
+        display: none; // Controlado pelo JS (flex)
+        position: fixed;
+        inset: 0;
+        backdrop-filter: blur(0.5em);
+        background-color: rgba(0, 0, 0, 0.4);
+        align-items: center;
+        justify-content: center;
+        z-index: 1001;
+
+        .boxModal {
+            position: relative;
+            bottom: initial;
+            right: initial;
+            background-color: #ffffff;
+            border: solid black 0.2em;
+            width: fit-content;
+            max-width: 90%;
+            border-radius: 1em;
+            padding: 3em 4em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+            .textModal {
+                font-weight: 500;
+                text-align: center;
+                font-size: 2.4em;
+            }
+
+            .modal-fechar-crm {
+                display: block;
+                margin: 1.5em auto 0;
+                background-color: transparent;
+                border: none;
+                padding: 0.8em 2em;
+                border-radius: 5em;
+                color: #000;
+                cursor: pointer;
+                transition: background 0.3s;
+                border: solid #000 0.2em;
+                font-weight: 600;
+                font-size: 1.8em;
+
+                &:hover {
+                    background-color: #000;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.textCategoria {
+    align-items: center;
+    background-color: #fff;
+    border: #000 solid 0.15em;
+    border-radius: 5em;
+    display: flex;
+    justify-content: center;
+    line-height: 1;
+    padding: clamp(0.6em, 1vw, 1em) clamp(1.4em, 3vw, 3em);
+    text-transform: lowercase;
+    text-wrap: nowrap;
+    transition:
+        background-color 0.3s $transition,
+        transform 0.3s $transition,
+        color 0.3s $transition;
+    width: fit-content;
+    z-index: 2;
+
+    h1,
+    p {
+        color: #000;
+        font-family: $font-editorial;
+        font-size: 2.2em;
+        font-style: italic;
+        font-weight: 500;
+        line-height: 1;
+
+        @media (max-width: $mobile-size) {
+            font-size: 1.34em;
+        }
+    }
+
+    &.big {
+        padding: calc(1em * 2) calc(3em * 2);
+
+        h1 {
+            font-size: 4em;
+        }
+
+        @media (max-width: $mobile-size) {
+            height: auto;
+            width: auto;
+            padding: 0.8em 2.5em;
+
+            h1 {
+                font-size: 2.8em;
+            }
+        }
+    }
+
+    &.cat-dafiti {
+
+        h1,
+        p {
+            font-variant-ligatures: no-common-ligatures;
+        }
+    }
+
+    @media (max-width: $mobile-size) {
+        font-size: 1.2em;
+    }
+}

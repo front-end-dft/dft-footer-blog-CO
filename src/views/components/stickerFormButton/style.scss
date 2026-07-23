@@ -1,0 +1,310 @@
+@use '../styles/variables' as *;
+
+// Estilo do Sticker
+button.stickerFormButton {
+    width: 8em;
+    aspect-ratio: 1/1;
+    position: fixed;
+    bottom: 1em;
+    left: 1em;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 100%;
+    box-shadow: .2em .2em .5em rgba(0, 0, 0, 0.2);
+    background-color: rgb(233, 173, 6);
+    background: radial-gradient(
+        circle at var(--x, 50%) var(--y, 50%), 
+        rgba(255, 255, 255, 1) 0%, 
+        rgb(233, 173, 6) 80%
+    );
+
+    @media (max-width: $tablet-size) {
+        transform: scale(.7);
+        bottom: 0em;
+        right: 0em;
+    }
+
+    svg {
+        fill: #000000;
+        font-size: .8em;
+        font-weight: bold;
+        letter-spacing: .3em;
+        text-transform: uppercase;
+        animation: rotateText 10s linear infinite;
+
+        @media (max-width: $tablet-size) {
+            font-size: .7em;
+        }
+    }
+
+    .selo {
+        position: absolute;
+        width: 50%;
+    }
+}
+
+// Animacão para o texto girar lentamente
+@keyframes rotateText {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.modal-form {
+    input:-webkit-autofill,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 1000px white inset !important; /* Troca o fundo para branco */
+        box-shadow: 0 0 0 1000px white inset !important;
+        -webkit-text-fill-color: #2F5A60  !important; /* Cor do texto */
+        caret-color: #2F5A60 !important; /* Cor do cursor */
+        transition: background-color 5000s ease-in-out 0s; /* Hack para evitar transição amarela */
+    }
+}
+
+.modal-form {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(.5em);
+    
+    .modal-content {
+        width: 90%;
+        max-width: 55em;
+        background-image: linear-gradient(to bottom, #5FA4B0, #abcccc);
+        border: dashed 0.2em #2F5A60;
+        padding: 4em;
+        border-radius: 3em;
+        position: relative;
+
+        @media (max-width: $tablet-size) {
+            padding: 5em 2em 2em;
+        }
+
+        // Botão de fechar
+        .closeBtnStickerFormButtonModal {
+            position: absolute;
+            top: .3em;
+            right: .7em;
+            border: none;
+            font-size: 2.5em;
+            cursor: pointer;
+            color: white;
+            background-color: transparent;
+            transition-duration: .2s;
+            &:hover {
+                transform: scale(1.3);
+            }
+        }
+
+        .title {
+            width: 100%;
+            max-width: 16em;
+            text-align: center;
+            margin: 0 auto 1em;
+            color: #FFD900;
+            font-size: 2em;
+            line-height: 1.4;
+
+            @media (max-width: $tablet-size) {
+                line-height: 1.1;
+            }
+
+            b {
+                font-weight: 600;
+            }
+        }
+
+        .text {
+            text-align: center;
+            color: #000000;
+            font-size: 1.3em;
+            margin: 1em auto;
+
+            b {
+                font-weight: 600;
+            }
+
+            a {
+                color: #ffffff;
+            }
+        }
+
+        .flexInputs {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: .5em;
+
+            input {
+                width: 100%;
+                padding: .5em 1em;
+                border-radius: 5em;
+                background-color: transparent;
+                border: solid #2F5A60 .15em;
+                color: #203d41;
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+                &::placeholder {
+                    color: #2F5A60;
+                }
+            }
+        }
+
+        .flexCategories,
+        .flexOptions {
+            max-width: 40em;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: .5em;
+            margin: 0 auto;
+    
+            .btnCat {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+        
+                input {
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    
+                    &:checked {
+                        ~ label {
+                            background-color: #FFD900;
+                            color: #000000;
+                        }
+                    }
+                    &:hover {
+                        ~ label {
+                            background-color: #FFD900;
+                            color: #000000;
+                        }
+                    }
+                }
+        
+                label {
+                    background-color: transparent;
+                    border: solid #2F5A60 .15em;
+                    color: #2F5A60;
+                    padding: .5em 1em;
+                    border-radius: 5em;
+                    text-align: center;
+                    position: relative;
+                    cursor: pointer;
+                    font-size: 1.3em;
+                }
+            }
+        }
+
+        .stickerFormSubmit {
+            background-color: #FFD900;
+            border: none;
+            color: #000000;
+            display: block;
+            padding: .5em 1em;
+            border-radius: 5em;
+            transition-duration: .2s;
+            cursor: pointer;
+            margin: 1em auto 0;
+            font-weight: 500;
+
+            &:hover {
+                transform: scale(1.1);
+                box-shadow: .0em .0em .5em rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        .loadingStickerFormButton {
+            display: none;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(.5em);
+            top: 0;
+            left: 0;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            .imgLoading {
+                width: 8em;
+            }
+        }
+        
+        .stickerFormFeedback {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(.5em);
+            background-color: rgba(0, 0, 0, 0.2);
+
+            .boxModalStickerFormFeedback {
+                background-color: #2F5A60;
+                border: solid #FFD900 .15em;
+                width: fit-content;
+                max-width: 90%;
+                border-radius: 2em;
+                position: relative;
+                padding: 3em 3.5em;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                box-shadow: .3em .3em 1em rgba(0, 0, 0, 0.5);
+
+                .text {
+                    margin: 0;
+                    color: #FFFFFF;
+                }
+
+                button.closeBtnStickerFormFeedback{
+                    position: relative;
+                    background-color: transparent;
+                    color: #ffffff;
+                    display: block;
+                    padding: .5em 1em;
+                    border-radius: 5em;
+                    transition-duration: .2s;
+                    cursor: pointer;
+                    margin: 1em auto 0;
+                    font-weight: 500;
+                    border: solid #ffffff .1em;
+
+                    &:hover {
+                        transform: scale(1.1);
+                        box-shadow: .0em .0em .5em rgba(0, 0, 0, 0.2);
+                    }
+
+                    p {
+                        font-size: 1.2em;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+
+}

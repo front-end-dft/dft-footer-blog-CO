@@ -1,0 +1,68 @@
+.accordionComponent {
+    width: 95%;
+    max-width: 78.6em;
+    margin: 5em auto;
+
+    * { font-size: 1.05em; }
+
+    .accordion {
+        width: 100%;
+
+        .accordion-title {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            background: #eee;
+            padding: 0.5em 2.5em 0.5em 1em;
+            border: .15em solid #ccc;
+            border-radius: 1.5em;
+            font-weight: bold;
+            transition: background 0.2s, border-radius 0.2s;
+            position: relative;
+
+            &::before {
+                content: '+';
+                position: absolute;
+                right: .7em;
+                transition: transform .3s ease;
+                font-size: 1.7em;
+                margin: 0;
+            }
+
+            &:hover { background: #ddd; }
+
+            &[aria-expanded="true"] {
+                border-radius: 1.5em 1.5em 0 0;
+                &::before {
+                    content: '-';
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease, padding 0.3s ease;
+            padding: 0 1em;
+            border: .15em solid #ccc;
+            border-top: none;
+            background: #fafafa;
+            opacity: 0;
+            border-radius: 0 0 1.5em 1.5em;
+            box-sizing: border-box;
+        
+            &.is-open {
+                opacity: 1;
+                padding-top: 1em;
+                padding-bottom: 1em;
+            }
+
+            ul { padding-left: 1em; }
+        }
+    }
+
+    .accordion + .accordion {
+        margin-top: .5em;
+    }
+}

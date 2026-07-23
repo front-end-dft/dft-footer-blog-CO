@@ -1,0 +1,44 @@
+include views/imports
+
+doctype html
+html(lang="pt-br")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Estrutura Dafiti
+        link(rel="stylesheet" href="styles/main.css")
+        link(rel="stylesheet" href="https://static.dafiti.com.co/media/cms/onsite/2026/blog/header-blog-co-280509.css")
+        //- link(rel="stylesheet", href="external/style.css")
+
+    body(style="font-size: 11px; font-family: 'Roboto', sans-serif; border-box: box-sizing; margin: 0; padding: 0;")
+        .dafitiStructure
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wdth,wght@0,87.5,100..900;1,87.5,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+            .footerMateria
+                .boxWhite
+                    +template-formulario-co('footer-blog-co')
+
+                .boxBlack
+                    .box
+                        img.logotipoDafiti(src="https://static.dafiti.com.br/cms/2026_05_08_14_43_52_Group_26655415.png", alt="logotipo dafiti")
+                        .flexRedes
+                            a(href="https://www.instagram.com/dafiti_colombia/")
+                                img(src="https://static.dafiti.com.br/cms/2026_05_08_14_43_54_ARTE.png", alt="Instagram") 
+                            a(href="https://www.tiktok.com/@dafiti_colombia")
+                                img(src="https://static.dafiti.com.br/cms/2026_05_08_14_43_54_ARTE_-1-.png", alt="TikTok")
+                            a(href="https://co.pinterest.com/dafiti_colombia/")
+                                img(src="https://static.dafiti.com.br/cms/2026_05_08_14_43_51_Group_26655556.png", alt="Pinterest")
+                        .flexInfos
+                            a(href="https://dafiticolombia.freshdesk.com/support/home")
+                                p Sobre Dafiti Prueba
+                            a(href="https://dafiticolombia.freshdesk.com/support/solutions/151000107047")
+                                p Contacto
+                            a(href="https://www.dafiti.com.co/")
+                                p Ir a la tienda
+
+    //- script(src="external/scripts.js")
+    script(src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.js")
+    script(src="js/main.js")

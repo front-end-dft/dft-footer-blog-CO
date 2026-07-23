@@ -1,0 +1,59 @@
+mixin template-formulario-br(campanha)
+    //- A classe .form-br é o que separa este formulário do outro no JS
+    .template-formulario-crm.form-br
+        form(
+            name="contact-form-static"
+            data-campaign=campanha
+            class="custom-crm-form js-form-static"
+        )
+            .flexInputs
+                input(type="text" name="nome" placeholder="*Nome" required)
+                input(type="email" name="email" placeholder="*E-mail" required)
+                //- ID removido, usamos classe para a máscara
+                input.js-input-tel(type="text" name="numero" placeholder="*(DDD) 99999-9999" maxlength="15" required)
+            
+            p.text Quais são as categorias que você deseja receber ofertas?
+            
+            .flexCategories
+                .btnCat(aria-live="polite")
+                    input(type="checkbox" name="categories1" value="tenis", id="br-cat1")
+                    label(for="br-cat1") Tênis
+                .btnCat(aria-live="polite")
+                    input(type="checkbox" name="categories2" value="bolsas", id="br-cat2")
+                    label(for="br-cat2") Bolsas
+                .btnCat(aria-live="polite")
+                    input(type="checkbox" name="categories3" value="vestuario", id="br-cat3")
+                    label(for="br-cat3") Vestuário
+                .btnCat(aria-live="polite")
+                    input(type="checkbox" name="categories4" value="perfumaria", id="br-cat4")
+                    label(for="br-cat4") Perfumaria
+                .btnCat(aria-live="polite")
+                    input(type="checkbox" name="categories5" value="calçados", id="br-cat5")
+                    label(for="br-cat5") Calçados
+                .btnCat(aria-live="polite")
+                    input(type="checkbox" name="categories6" value="acessorios", id="br-cat6")
+                    label(for="br-cat6") Acessórios
+                                
+            p.text Selecione suas categorias preferidas...
+
+            .flexOptions
+                .btnCat(aria-live="polite")
+                    input(type="checkbox" name="options1" value="feminino", id="br-feminino")
+                    label(for="br-feminino") Feminino
+                .btnCat(aria-live="polite")
+                    input(type="checkbox" name="options2" value="masculino", id="br-masculino")
+                    label(for="br-masculino") Masculino
+                .btnCat(aria-live="polite")
+                    input(type="checkbox" name="options3" value="infantil", id="br-infantil")
+                    label(for="br-infantil") Infantil
+
+            p.text *Ao clicar em ENVIAR...
+            button.submit.js-submit-btn(type="button") ENVIAR
+        
+        .loadingCrm.js-loading(style="display:none")
+            img.imgLoading(src="https://dafitistatic.dafiti.com.br/cms/black-dafiti/2024_10_16_09_38_20_kOnzy.gif")
+
+        .modal-dados-crm.js-modal-success(style="display:none")
+            .boxModal
+                p.textModal Dados enviados com sucesso!
+                button.modal-fechar-crm.js-close-modal Fechar

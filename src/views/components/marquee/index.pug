@@ -1,0 +1,19 @@
+mixin component-marquee(items)
+    section.marquee-container
+        each item in items
+            a.marquee-wrapper(data-hover-img=item.imageDesk, href=item.link)
+                img.imgCard(src=item.imageMob, alt="Preview")
+                
+                .marquee-scroll
+                    //- O primeiro span é o "oficial" (acessível)
+                    span.marquee-item= item.texto
+                    
+                    //- Os clones são escondidos de leitores de tela
+                    - let n = 0;
+                    while n < 14
+                        span.marquee-item(aria-hidden="true")= item.texto
+                        - n++
+    
+        .mouse-follower
+            img.follower-img(src="", alt="")
+            .buy-badge Comprar

@@ -1,0 +1,28 @@
+mixin template-formulario-co(campanha)
+    .newsletter
+        .boxNewsLetter
+            h2.newsletter-title ¡Mantente al tanto!
+            p.newsletter-text Regístrate para recibir nuestras novedades y promociones:
+            //- A classe .form-co é o que separa este formulário do outro no JS
+            .template-formulario-crm.form-co
+                form(
+                    name="contact-form-static"
+                    data-campaign=campanha
+                    class="custom-crm-form js-form-static"
+                )
+                    .flexInputs
+                        input(type="text" name="nome" placeholder="Nombre" required)
+                        input(type="email" name="email" placeholder="Correo electrónico" required)
+                        //- ID removido, usamos classe para a máscara
+                        input.js-input-tel(type="text" name="numero" placeholder="Teléfono" maxlength="10" required)
+
+                    button.submit.js-submit-btn.textCategoria(type="button")
+                        p registrarse
+
+                .loadingCrm.js-loading(style="display:none")
+                    img.imgLoading(src="https://static.dafiti.com.br/cms/black-dafiti/2024_10_16_09_38_20_kOnzy.gif")
+
+                .modal-dados-crm.js-modal-success(style="display:none")
+                    .boxModal
+                        p.textModal Datos enviados con éxito
+                        button.modal-fechar-crm.js-close-modal Cerrar

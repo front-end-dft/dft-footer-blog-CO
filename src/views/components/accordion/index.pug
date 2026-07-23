@@ -1,0 +1,8 @@
+mixin accordionComponent(items)
+    .accordionComponent
+        each item in items
+            .accordion
+                .accordion-title(role="button" aria-expanded="false")
+                    span= item.title
+                .accordion-content
+                    | !{item.bodyAccordion}
