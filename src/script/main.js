@@ -217,7 +217,7 @@ function montarFooterDafiti() {
               '<a href="https://co.pinterest.com/dafiti_colombia/" target="_blank" rel="noopener"><img src="https://static.dafiti.com.br/cms/2026_05_08_14_43_51_Group_26655556.png" alt="Pinterest"></a>' +
             '</div>' +
             '<div class="flexInfos">' +
-              '<a href="https://dafiticolombia.freshdesk.com/support/home" target="_blank" rel="noopener"><p>Sobre Dafiti Prueba</p></a>' +
+              '<a href="https://dafiticolombia.freshdesk.com/support/home" target="_blank" rel="noopener"><p>Sobre Dafiti</p></a>' +
               '<a href="https://dafiticolombia.freshdesk.com/support/solutions/151000107047" target="_blank" rel="noopener"><p>Contacto</p></a>' +
               '<a href="https://www.dafiti.com.co/" target="_blank" rel="noopener"><p>Ir a la tienda </p></a>' +
             '</div>' +
