@@ -1,1 +1,454 @@
-.dafitiStructure *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}.dafitiStructure{width:100vw;font-size:87.5%;}@media (max-width:1400px){.dafitiStructure{font-size:78%;}}@media (max-width:1000px){.dafitiStructure{font-size:75%;}}@media (max-width:650px){.dafitiStructure{font-size:90%;}}.full-hd{width:100%;max-width:1920px;margin:0 auto;}.boxLoading{width:100%;height:100%;min-height:400px;position:absolute;inset:0;display:flex;justify-content:center;align-items:center;background:rgb(255, 255, 255);z-index:5;transition-duration:0.5s;}.boxLoading.zoomOut{opacity:0;height:auto;}.boxLoading .imgLoading{width:30px;height:30px;border:2px solid transparent;border-top-color:#000000;border-right-color:#000000;border-bottom-color:#000000;border-radius:50%;animation:spin 0.7s linear infinite;}@keyframes spin{to{transform:rotate(360deg);}}.newsletter-title{color:#000;font-family:"Noto Serif", serif;font-size:4em;font-style:italic;font-weight:600;margin:0.4em auto 0.1em auto;}@media (max-width:650px){.newsletter-title{font-size:2.4em;}}.newsletter{background-color:#fff;width:100%;display:flex;justify-content:center;margin:2em auto 3em;}@media (max-width:1000px){.newsletter{width:calc(100% - 1em);}}.newsletter .boxNewsLetter{padding:3em 8%;width:100%;}@media (max-width:1000px){.newsletter .boxNewsLetter{padding:3em 5%;}}.newsletter .boxNewsLetter .newsletter-title{text-align:center;}.newsletter .boxNewsLetter .newsletter-text{font-family:"Roboto", sans-serif;font-size:2em;font-style:italic;font-weight:500;line-height:1.6;text-align:center;}@media (max-width:650px){.newsletter .boxNewsLetter .newsletter-text{font-size:1.6em;}}.template-formulario-crm input:-webkit-autofill, .template-formulario-crm input:-webkit-autofill:focus, .template-formulario-crm input:-webkit-autofill:hover, .template-formulario-crm input:-webkit-autofill:active{-webkit-box-shadow:0 0 0 1000px white inset !important;box-shadow:0 0 0 1000px white inset !important;-webkit-text-fill-color:#000 !important;caret-color:#000 !important;transition:background-color 5000s ease-in-out 0s;}.template-formulario-crm form{position:relative;display:flex;flex-direction:column;align-items:center;}.template-formulario-crm form .text{margin:1em 0;text-align:center;line-height:1.2;}.template-formulario-crm form .text a{color:#ccc;text-decoration:underline;}.template-formulario-crm form .flexInputs{width:100%;display:flex;align-items:center;gap:0.8em 2em;justify-content:center;padding:0 0.5em;}.template-formulario-crm form .flexInputs input{width:33.3333333333%;border:solid #000 0.15em;padding:0.5em 1em;border-radius:5em;font-family:"Roboto", sans-serif;font-size:1.8em;font-style:italic;font-weight:300;margin-top:1.2em;max-width:30em;}@media (max-width:650px){.template-formulario-crm form .flexInputs input{font-size:1.3em;margin:0;}}.template-formulario-crm form .flexInputs input:focus{outline:none;border-color:#000;}@media (max-width:650px){.template-formulario-crm form .flexInputs{flex-direction:column;margin-top:0.5em;}.template-formulario-crm form .flexInputs input{width:100%;margin:0;}}.template-formulario-crm form .flexCategories, .template-formulario-crm form .flexOptions{display:flex;flex-wrap:wrap;justify-content:center;gap:0.5em;margin-bottom:1em;}.template-formulario-crm form .flexCategories .btnCat, .template-formulario-crm form .flexOptions .btnCat{display:flex;flex-direction:column;align-items:center;position:relative;}.template-formulario-crm form .flexCategories .btnCat input, .template-formulario-crm form .flexOptions .btnCat input{width:100%;height:100%;opacity:0;position:absolute;left:0;top:0;cursor:pointer;z-index:2;}.template-formulario-crm form .flexCategories .btnCat input:checked ~ label, .template-formulario-crm form .flexCategories .btnCat input:hover ~ label, .template-formulario-crm form .flexOptions .btnCat input:checked ~ label, .template-formulario-crm form .flexOptions .btnCat input:hover ~ label{background-color:black;color:white;border-color:black;}.template-formulario-crm form .flexCategories .btnCat label, .template-formulario-crm form .flexOptions .btnCat label{background-color:white;border:solid #ccc 0.15em;padding:0.5em 1em;border-radius:5em;text-align:center;position:relative;cursor:pointer;transition:all 0.3s ease;}.template-formulario-crm form #submitCrm, .template-formulario-crm form .submit, .template-formulario-crm form .textCategoria{appearance:none;-webkit-appearance:none;background-color:#000;cursor:pointer;margin:2.6em 0 0;outline:none;}@media (max-width:650px){.template-formulario-crm form #submitCrm, .template-formulario-crm form .submit, .template-formulario-crm form .textCategoria{margin:1em 0 0;}}.template-formulario-crm form #submitCrm p, .template-formulario-crm form .submit p, .template-formulario-crm form .textCategoria p{color:#fff;}.template-formulario-crm form #submitCrm:disabled, .template-formulario-crm form .submit:disabled, .template-formulario-crm form .textCategoria:disabled{background-color:#ccc;border-color:#ccc;cursor:not-allowed;}.template-formulario-crm form #submitCrm:hover:not(:disabled), .template-formulario-crm form .submit:hover:not(:disabled), .template-formulario-crm form .textCategoria:hover:not(:disabled){background-color:#fff;}.template-formulario-crm form #submitCrm:hover:not(:disabled) p, .template-formulario-crm form .submit:hover:not(:disabled) p, .template-formulario-crm form .textCategoria:hover:not(:disabled) p{color:#000;}.template-formulario-crm .loadingCrm, .template-formulario-crm .loading{display:none;position:fixed;inset:0;backdrop-filter:blur(0.5em);background-color:rgba(255, 255, 255, 0.5);align-items:center;justify-content:center;z-index:1000;}.template-formulario-crm .loadingCrm .imgLoading, .template-formulario-crm .loading .imgLoading{width:8em;}.template-formulario-crm .modal-dados-crm, .template-formulario-crm .modal-dados{display:none;position:fixed;inset:0;backdrop-filter:blur(0.5em);background-color:rgba(0, 0, 0, 0.4);align-items:center;justify-content:center;z-index:1001;}.template-formulario-crm .modal-dados-crm .boxModal, .template-formulario-crm .modal-dados .boxModal{position:relative;bottom:initial;right:initial;background-color:#ffffff;border:solid black 0.2em;width:fit-content;max-width:90%;border-radius:1em;padding:3em 4em;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 10px 25px rgba(0, 0, 0, 0.2);}.template-formulario-crm .modal-dados-crm .boxModal .textModal, .template-formulario-crm .modal-dados .boxModal .textModal{font-weight:500;text-align:center;font-size:2.4em;}.template-formulario-crm .modal-dados-crm .boxModal .modal-fechar-crm, .template-formulario-crm .modal-dados .boxModal .modal-fechar-crm{display:block;margin:1.5em auto 0;background-color:transparent;border:none;padding:0.8em 2em;border-radius:5em;color:#000;cursor:pointer;transition:background 0.3s;border:solid #000 0.2em;font-weight:600;font-size:1.8em;}.template-formulario-crm .modal-dados-crm .boxModal .modal-fechar-crm:hover, .template-formulario-crm .modal-dados .boxModal .modal-fechar-crm:hover{background-color:#000;color:#fff;}.textCategoria{align-items:center;background-color:#fff;border:#000 solid 0.15em;border-radius:5em;display:flex;justify-content:center;line-height:1;padding:clamp(0.6em, 1vw, 1em) clamp(1.4em, 3vw, 3em);text-transform:lowercase;text-wrap:nowrap;transition:background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;width:fit-content;z-index:2;}.textCategoria h1, .textCategoria p{color:#000;font-family:"Noto Serif", serif;font-size:2.2em;font-style:italic;font-weight:500;line-height:1;}@media (max-width:650px){.textCategoria h1, .textCategoria p{font-size:1.34em;}}.textCategoria.big{padding:2em 6em;}.textCategoria.big h1{font-size:4em;}@media (max-width:650px){.textCategoria.big{height:auto;width:auto;padding:0.8em 2.5em;}.textCategoria.big h1{font-size:2.8em;}}.textCategoria.cat-dafiti h1, .textCategoria.cat-dafiti p{font-variant-ligatures:no-common-ligatures;}@media (max-width:650px){.textCategoria{font-size:1.2em;}}.boxWhite{width:100%;display:flex;justify-content:center;}.boxBlack{width:100%;background-color:#000000;padding:30px 10%;}.boxBlack .box{width:100%;max-width:1024px;display:flex;flex-direction:column;align-items:center;margin:0 auto;}.boxBlack .box .logotipoDafiti{width:150px;display:block;}.boxBlack .box .flexRedes{display:flex;gap:60px;margin-top:31px;}.boxBlack .box .flexRedes a{transition-duration:0.3s;}.boxBlack .box .flexRedes a img{display:block;width:40px;}.boxBlack .box .flexRedes a:hover{transform:scale(1.1);}.boxBlack .box .flexInfos{display:flex;gap:80px;margin-top:31px;}.boxBlack .box .flexInfos a{color:#ffffff;}.boxBlack .box .flexInfos a p{font-family:"Roboto", sans-serif;text-transform:uppercase;font-size:16px;}@media (max-width:650px){.boxBlack .box .flexInfos{margin-top:50px;flex-direction:column;gap:20px;}.boxBlack .box .flexInfos p{text-align:center;}}/*# sourceMappingURL=main.css.map */ 
+.dafitiStructure * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.dafitiStructure {
+  width: 100vw;
+  font-size: 87.5%;
+}
+@media (max-width: 1400px) {
+  .dafitiStructure {
+    font-size: 78%;
+  }
+}
+@media (max-width: 1000px) {
+  .dafitiStructure {
+    font-size: 75%;
+  }
+}
+@media (max-width: 650px) {
+  .dafitiStructure {
+    font-size: 90%;
+  }
+}
+
+.full-hd {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.boxLoading {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  z-index: 5;
+  transition-duration: 0.5s;
+}
+.boxLoading.zoomOut {
+  opacity: 0;
+  height: auto;
+}
+.boxLoading .imgLoading {
+  width: 30px;
+  height: 30px;
+  border: 2px solid transparent;
+  border-top-color: #000000;
+  border-right-color: #000000;
+  border-bottom-color: #000000;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.newsletter-title {
+  color: #000;
+  font-family: "Noto Serif", serif;
+  font-size: 4em;
+  font-style: italic;
+  font-weight: 600;
+  margin: 0.4em auto 0.1em auto;
+}
+@media (max-width: 650px) {
+  .newsletter-title {
+    font-size: 2.4em;
+  }
+}
+
+.newsletter {
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2em auto 3em;
+}
+@media (max-width: 1000px) {
+  .newsletter {
+    width: calc(100% - 1em);
+  }
+}
+.newsletter .boxNewsLetter {
+  padding: 3em 8%;
+  width: 100%;
+}
+@media (max-width: 1000px) {
+  .newsletter .boxNewsLetter {
+    padding: 3em 5%;
+  }
+}
+.newsletter .boxNewsLetter .newsletter-title {
+  text-align: center;
+}
+.newsletter .boxNewsLetter .newsletter-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 2em;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.6;
+  text-align: center;
+}
+@media (max-width: 650px) {
+  .newsletter .boxNewsLetter .newsletter-text {
+    font-size: 1.6em;
+  }
+}
+
+.template-formulario-crm input:-webkit-autofill,
+.template-formulario-crm input:-webkit-autofill:focus,
+.template-formulario-crm input:-webkit-autofill:hover,
+.template-formulario-crm input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  box-shadow: 0 0 0 1000px white inset !important;
+  -webkit-text-fill-color: #000 !important;
+  caret-color: #000 !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+.template-formulario-crm form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.template-formulario-crm form .text {
+  margin: 1em 0;
+  text-align: center;
+  line-height: 1.2;
+}
+.template-formulario-crm form .text a {
+  color: #ccc;
+  text-decoration: underline;
+}
+.template-formulario-crm form .flexInputs {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.8em 2em;
+  justify-content: center;
+  padding: 0 0.5em;
+}
+.template-formulario-crm form .flexInputs input {
+  width: 33.3333333333%;
+  border: solid #000 0.15em;
+  padding: 0.5em 1em;
+  border-radius: 5em;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8em;
+  font-style: italic;
+  font-weight: 300;
+  margin-top: 1.2em;
+  max-width: 30em;
+}
+@media (max-width: 650px) {
+  .template-formulario-crm form .flexInputs input {
+    font-size: 1.3em;
+    margin: 0;
+  }
+}
+.template-formulario-crm form .flexInputs input:focus {
+  outline: none;
+  border-color: #000;
+}
+@media (max-width: 650px) {
+  .template-formulario-crm form .flexInputs {
+    flex-direction: column;
+    margin-top: 0.5em;
+  }
+  .template-formulario-crm form .flexInputs input {
+    width: 100%;
+    margin: 0;
+  }
+}
+.template-formulario-crm form .flexCategories,
+.template-formulario-crm form .flexOptions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5em;
+  margin-bottom: 1em;
+}
+.template-formulario-crm form .flexCategories .btnCat,
+.template-formulario-crm form .flexOptions .btnCat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.template-formulario-crm form .flexCategories .btnCat input,
+.template-formulario-crm form .flexOptions .btnCat input {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+.template-formulario-crm form .flexCategories .btnCat input:checked ~ label, .template-formulario-crm form .flexCategories .btnCat input:hover ~ label,
+.template-formulario-crm form .flexOptions .btnCat input:checked ~ label,
+.template-formulario-crm form .flexOptions .btnCat input:hover ~ label {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+.template-formulario-crm form .flexCategories .btnCat label,
+.template-formulario-crm form .flexOptions .btnCat label {
+  background-color: white;
+  border: solid #ccc 0.15em;
+  padding: 0.5em 1em;
+  border-radius: 5em;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.template-formulario-crm form #submitCrm,
+.template-formulario-crm form .submit,
+.template-formulario-crm form .textCategoria {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #000;
+  cursor: pointer;
+  margin: 2.6em 0 0;
+  outline: none;
+}
+@media (max-width: 650px) {
+  .template-formulario-crm form #submitCrm,
+  .template-formulario-crm form .submit,
+  .template-formulario-crm form .textCategoria {
+    margin: 1em 0 0;
+  }
+}
+.template-formulario-crm form #submitCrm p,
+.template-formulario-crm form .submit p,
+.template-formulario-crm form .textCategoria p {
+  color: #fff;
+}
+.template-formulario-crm form #submitCrm:disabled,
+.template-formulario-crm form .submit:disabled,
+.template-formulario-crm form .textCategoria:disabled {
+  background-color: #ccc;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+.template-formulario-crm form #submitCrm:hover:not(:disabled),
+.template-formulario-crm form .submit:hover:not(:disabled),
+.template-formulario-crm form .textCategoria:hover:not(:disabled) {
+  background-color: #fff;
+}
+.template-formulario-crm form #submitCrm:hover:not(:disabled) p,
+.template-formulario-crm form .submit:hover:not(:disabled) p,
+.template-formulario-crm form .textCategoria:hover:not(:disabled) p {
+  color: #000;
+}
+.template-formulario-crm .loadingCrm,
+.template-formulario-crm .loading {
+  display: none;
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(0.5em);
+  background-color: rgba(255, 255, 255, 0.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.template-formulario-crm .loadingCrm .imgLoading,
+.template-formulario-crm .loading .imgLoading {
+  width: 8em;
+}
+.template-formulario-crm .modal-dados-crm,
+.template-formulario-crm .modal-dados {
+  display: none;
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(0.5em);
+  background-color: rgba(0, 0, 0, 0.4);
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+}
+.template-formulario-crm .modal-dados-crm .boxModal,
+.template-formulario-crm .modal-dados .boxModal {
+  position: relative;
+  bottom: initial;
+  right: initial;
+  background-color: #ffffff;
+  border: solid black 0.2em;
+  width: fit-content;
+  max-width: 90%;
+  border-radius: 1em;
+  padding: 3em 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.template-formulario-crm .modal-dados-crm .boxModal .textModal,
+.template-formulario-crm .modal-dados .boxModal .textModal {
+  font-weight: 500;
+  text-align: center;
+  font-size: 2.4em;
+}
+.template-formulario-crm .modal-dados-crm .boxModal .modal-fechar-crm,
+.template-formulario-crm .modal-dados .boxModal .modal-fechar-crm {
+  display: block;
+  margin: 1.5em auto 0;
+  background-color: transparent;
+  border: none;
+  padding: 0.8em 2em;
+  border-radius: 5em;
+  color: #000;
+  cursor: pointer;
+  transition: background 0.3s;
+  border: solid #000 0.2em;
+  font-weight: 600;
+  font-size: 1.8em;
+}
+.template-formulario-crm .modal-dados-crm .boxModal .modal-fechar-crm:hover,
+.template-formulario-crm .modal-dados .boxModal .modal-fechar-crm:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.textCategoria {
+  align-items: center;
+  background-color: #fff;
+  border: #000 solid 0.15em;
+  border-radius: 5em;
+  display: flex;
+  justify-content: center;
+  line-height: 1;
+  padding: clamp(0.6em, 1vw, 1em) clamp(1.4em, 3vw, 3em);
+  text-transform: lowercase;
+  text-wrap: nowrap;
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+  width: fit-content;
+  z-index: 2;
+}
+.textCategoria h1,
+.textCategoria p {
+  color: #000;
+  font-family: "Noto Serif", serif;
+  font-size: 2.2em;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1;
+}
+@media (max-width: 650px) {
+  .textCategoria h1,
+  .textCategoria p {
+    font-size: 1.34em;
+  }
+}
+.textCategoria.big {
+  padding: 2em 6em;
+}
+.textCategoria.big h1 {
+  font-size: 4em;
+}
+@media (max-width: 650px) {
+  .textCategoria.big {
+    height: auto;
+    width: auto;
+    padding: 0.8em 2.5em;
+  }
+  .textCategoria.big h1 {
+    font-size: 2.8em;
+  }
+}
+.textCategoria.cat-dafiti h1,
+.textCategoria.cat-dafiti p {
+  font-variant-ligatures: no-common-ligatures;
+}
+@media (max-width: 650px) {
+  .textCategoria {
+    font-size: 1.2em;
+  }
+}
+
+.boxWhite {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.boxBlack {
+  width: 100%;
+  background-color: #000000;
+  padding: 30px 10%;
+}
+.boxBlack .box {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+.boxBlack .box .logotipoDafiti {
+  width: 150px;
+  display: block;
+}
+.boxBlack .box .flexRedes {
+  display: flex;
+  gap: 60px;
+  margin-top: 31px;
+}
+.boxBlack .box .flexRedes a {
+  transition-duration: 0.3s;
+}
+.boxBlack .box .flexRedes a img {
+  display: block;
+  width: 40px;
+}
+.boxBlack .box .flexRedes a:hover {
+  transform: scale(1.1);
+}
+.boxBlack .box .flexInfos {
+  display: flex;
+  gap: 80px;
+  margin-top: 31px;
+}
+.boxBlack .box .flexInfos a {
+  color: #ffffff;
+}
+.boxBlack .box .flexInfos a p {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+@media (max-width: 650px) {
+  .boxBlack .box .flexInfos {
+    margin-top: 50px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .boxBlack .box .flexInfos p {
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=main.css.map */

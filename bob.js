@@ -31,8 +31,7 @@ function ask() {
         const gulpCmd = process.platform === 'win32' ? 'gulp.cmd' : 'gulp';
         const child = spawn(gulpCmd, ['build-production'], {
             stdio: 'inherit',
-            env,
-            shell: true
+            env
         });
 
         child.on('close', (code) => {
