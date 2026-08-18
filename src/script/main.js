@@ -182,8 +182,8 @@ function montarFooterDafiti() {
         '<div class="boxWhite">' +
           '<div class="newsletter">' +
             '<div class="boxNewsLetter">' +
-              '<h2 class="newsletter-title">¡Mantente al tanto!</h2>' +
-              '<p class="newsletter-text">Regístrate para receber nuestras novedades y promociones:</p>' +
+              '<h2 class="newsletter-title">¡No te pierdas nada!</h2>' +
+              '<p class="newsletter-text">Regístrate para recibir nuestras novedades y promociones</p>' +
               '<div class="template-formulario-crm form-co">' +
                 '<form class="custom-crm-form js-form-static" name="contact-form-static" data-campaign="footer-blog-co">' +
                   '<div class="flexInputs">' +
